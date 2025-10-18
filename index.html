@@ -1,67 +1,158 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CAP Garland, LLC</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f0f0f0;
-      color: #333;
-    }
-    header {
-      background-color: #003366;
-      color: white;
-      padding: 30px 20px;
-      text-align: center;
-    }
-    section {
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-    h1, h2 {
-      color: #003366;
-    }
-    .contact {
-      background: #fff;
-      padding: 20px;
-      border-left: 5px solid #003366;
-      margin-top: 30px;
-    }
-    footer {
-      background-color: #003366;
-      color: white;
-      text-align: center;
-      padding: 15px;
-      margin-top: 50px;
-    }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Salt and Sculpt LLC — Murrieta, CA</title>
+<meta name="description" content="Salt and Sculpt LLC • Specialty salt shop in Murrieta, CA 92562. Gourmet salts, hydration essentials, and wellness goods. Coming soon!">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --blue:#2563eb;   /* primary accent — blue */
+    --navy:#0f172a;   /* deep navy for contrast */
+    --ink:#111827;    /* text */
+    --muted:#6b7280;  /* secondary text */
+    --white:#ffffff;  /* requested base color */
+    --soft:#e5e7eb;   /* light borders */
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:Inter,system-ui,Arial,Helvetica,sans-serif;background:var(--white);color:var(--ink)}
+  a{color:var(--blue);text-decoration:none}
+
+  header{background:var(--white);color:var(--ink);text-align:center;padding:34px 16px;border-bottom:6px solid var(--blue)}
+  header h1{margin:0;font-size:2.2rem}
+  header p{margin:8px 0 0;color:var(--muted)}
+
+  nav{background:var(--white);text-align:center;padding:12px;border-bottom:1px solid var(--soft);position:sticky;top:0;z-index:10}
+  nav a{color:var(--ink);margin:0 14px;font-weight:800}
+  nav a:hover{color:var(--blue)}
+
+  .hero{max-width:1100px;margin:24px auto;display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:center;padding:0 14px}
+  .hero img{width:100%;border-radius:14px;border:4px solid var(--blue);object-fit:cover}
+  .hero .text{background:var(--white);border:1px solid var(--soft);border-left:6px solid var(--blue);border-radius:14px;padding:18px}
+  .pill{display:inline-block;background:#e0e7ff;border:1px solid #c7d2fe;color:#1e3a8a;border-radius:999px;padding:6px 12px;margin:6px 6px 0 0;font-size:.9rem}
+
+  .section{max-width:1100px;margin:22px auto;background:var(--white);padding:22px;border-radius:12px;border:1px solid var(--soft)}
+  .section h2{margin:0 0 12px;color:#0b1220}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+
+  .card{background:var(--white);border:1px solid var(--soft);border-left:6px solid var(--blue);border-radius:10px;padding:12px}
+
+  .notice{display:flex;align-items:center;gap:10px;background:#f8fafc;border:1px dashed #cbd5e1;padding:12px;border-radius:10px}
+  .notice b{color:#0b1220}
+
+  .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin-top:14px}
+  .gallery img{width:100%;border-radius:10px;border:2px solid var(--blue);object-fit:cover;aspect-ratio:4/3}
+
+  .cta{margin-top:12px;display:flex;gap:12px;flex-wrap:wrap}
+  .btn{background:var(--blue);color:#fff;padding:12px 16px;border-radius:10px;font-weight:800}
+  .btn.secondary{background:#fff;color:var(--ink);border:2px solid var(--ink)}
+
+  footer{background:var(--white);color:var(--muted);text-align:center;padding:18px;margin-top:26px;border-top:6px solid var(--blue)}
+
+  /* Floating buttons */
+  .bar{position:fixed;left:0;right:0;bottom:0;background:#ffffffd9;backdrop-filter:blur(6px);display:flex;gap:10px;justify-content:center;padding:10px;border-top:2px solid var(--blue);z-index:999}
+  .bar a{background:var(--navy);color:#fff;padding:10px 14px;border-radius:999px;font-weight:800}
+  .bar a:nth-child(2){background:var(--blue)}
+  @media(min-width:820px){.bar{display:none}}
+  @media(max-width:900px){.hero{grid-template-columns:1fr}}
+</style>
 </head>
 <body>
-  <header>
-    <h1>CAP Garland, LLC</h1>
-    <p>Private Investment Fund</p>
-  </header>
 
-  <section>
-    <h2>About Us</h2>
-    <p>CAP Garland, LLC is a Washington-based private investment fund focused on delivering value through diversified investment strategies.</p>
+<header>
+  <h1>Salt and Sculpt LLC</h1>
+  <p>Specialty Salt Shop • SEVEN OAKS DR, Murrieta, CA 92562</p>
+</header>
 
-    <h2>Contact</h2>
-    <div class="contact">
-      <p><strong>Address:</strong> 915 W 2nd Ave, Spokane, WA 99201</p>
-      <p><strong>Email:</strong> <a href="mailto:ryanberg@capgarland.shop">ryanberg@capgarland.shop</a></p>
-      <p><strong>Phone:</strong> (509) 822-3850</p>
+<nav>
+  <a href="#about">About</a>
+  <a href="#products">Products</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <img src="https://cdn11.bigcommerce.com/s-es6mq0y/images/stencil/532x532/products/1438/2030/Truffle_Salt__27232_825__38112.1741172246.JPG?c=2" alt="Gourmet truffle salt jar">
+  <div class="text">
+    <h2>Pure flavor. Thoughtful minerals. Coming soon.</h2>
+    <p>We’re crafting a curated selection of gourmet salts and hydration‑friendly blends for kitchen and wellness. Sign up for launch updates and early access.</p>
+    <div>
+      <span class="pill">🧂 Gourmet Salts</span>
+      <span class="pill">💧 Hydration</span>
+      <span class="pill">🌊 Sea‑Inspired</span>
     </div>
-  </section>
+    <div class="cta">
+      <a class="btn" href="tel:+15734045427">Call: +1 (573) 404‑5427</a>
+      <a class="btn secondary" href="mailto:info@keravion.shop">Email: info@keravion.shop</a>
+    </div>
+  </div>
+</section>
 
-  <footer>
-    &copy; 2025 CAP Garland, LLC. All rights reserved.
-  </footer>
+<!-- ABOUT -->
+<section id="about" class="section">
+  <h2>About Us</h2>
+  <p><strong>Salt and Sculpt LLC</strong> is a boutique <em>salt shop</em> opening in Murrieta, California. From delicately smoked crystals to mineral‑rich hydration salts, we’ll bring you small‑batch quality and clean labels.</p>
+  <p><strong>Address:</strong> SEVEN OAKS DR, Murrieta, CA 92562 • <strong>Email:</strong> <a href="mailto:info@keravion.shop">info@keravion.shop</a> • <strong>Phone:</strong> <a href="tel:+15734045427">+1 (573) 404‑5427</a></p>
+  <div class="notice" role="status">🔔 <b>COMING SOON:</b> Our storefront and online shop are almost ready. Stay tuned!</div>
+</section>
+
+<!-- PRODUCTS (COMING SOON) -->
+<section id="products" class="section">
+  <h2>Products</h2>
+  <div class="card">
+    <p><strong>COMING SOON</strong> — Gourmet salts, everyday cooking blends, and hydration‑focused mineral mixes.</p>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery" class="section">
+  <h2>Gallery</h2>
+  <div class="gallery">
+    <img src="https://images.heb.com/is/image/HEBGrocery/001369089-8?jpegSize=150&hei=1400&fit=constrain&qlt=75&v=1" alt="Sea salt bag">
+    <img src="https://cdn.shopify.com/s/files/1/1824/8017/files/6Jan_PDPBenefits_PureHydration_sodium.jpg?v=1673028091" alt="Hydration benefits graphic">
+    <img src="https://static.vecteezy.com/system/resources/previews/004/243/615/non_2x/creative-coming-soon-teaser-background-free-vector.jpg" alt="Coming soon teaser">
+    <img src="https://cdn11.bigcommerce.com/s-es6mq0y/images/stencil/532x532/products/1438/2030/Truffle_Salt__27232_825__38112.1741172246.JPG?c=2" alt="Gourmet salt jar">
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section">
+  <h2>Contact</h2>
+  <div class="grid">
+    <div>
+      <p>📧 <strong>Email:</strong> <a href="mailto:info@keravion.shop">info@keravion.shop</a></p>
+      <p>📞 <strong>Phone:</strong> <a href="tel:+15734045427">+1 (573) 404‑5427</a></p>
+      <p>📍 <strong>Address:</strong> SEVEN OAKS DR, Murrieta, CA 92562</p>
+    </div>
+    <div>
+      <p><em>Hours (Pre‑launch)</em></p>
+      <ul>
+        <li>Mon–Fri: 9:00 – 17:00</li>
+        <li>Sat–Sun: Closed</li>
+      </ul>
+    </div>
+  </div>
+  <div class="cta">
+    <a class="btn" href="#products">See Products</a>
+    <a class="btn secondary" href="#about">Get Updates</a>
+  </div>
+</section>
+
+<!-- MOBILE BAR -->
+<div class="bar">
+  <a href="tel:+15734045427">Call</a>
+  <a href="mailto:info@keravion.shop">Email</a>
+  <a href="#products">Products</a>
+</div>
+
+<footer>
+  <p>&copy; 2025 Salt and Sculpt LLC — Murrieta, CA</p>
+</footer>
+
 </body>
 </html>
